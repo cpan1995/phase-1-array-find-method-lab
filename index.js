@@ -61,12 +61,20 @@ const record = [
   ];
 
 function superbowlWin(superBowlArray){
-   return superBowlArray.find((element) => {
+   let newValue= superBowlArray.find((element) => {
        if(element.result == ('W')){
-           console.log(element.year);
            return element.year;
        }
+       else{
+           return null;
+       }
    })
+   if (newValue!=null){
+       return newValue.year
+   }
+   else{
+       return undefined;
+   }
 }
 
 superbowlWin(record);
